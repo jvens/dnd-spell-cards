@@ -62,7 +62,7 @@ int main(int argc, char** argv)
 
 	while(file = readdir(in_dir))
 	{
-		if(strstr(file->d_name, ".markdown") == NULL)
+		if(strstr(file->d_name, ".markdown") == NULL && strstr(file->d_name, ".md") == NULL)
 			continue;
 		strcpy(fn, file->d_name);
 		//printf("%s\t", file_name); fflush(stdout);
